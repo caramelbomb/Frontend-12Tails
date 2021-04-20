@@ -8,16 +8,19 @@ export default function Login () {
         <img src='https://www.12tails-th.com/assets/img/static/logo.png' className={styles.overlapImg} />
       </div>
       <div className={styles.loginForm}>
-        <h2>Login Form</h2>
+        <h2 style={{ fontSize: '30px', margin: '10px' }}>Login Form</h2>
         <form>
           <div className={styles.form}>
-            <label><b>Username</b></label>
-            <input type='text' placeholder='Username' required />
+            <div>
+              <label><b>Username</b></label>
+              <input type='text' placeholder='Username' required className={styles.input} />
+            </div>
+            <div style={{ marginTop: '10px' }}>
+              <label><b>Password</b></label>
+              <input type='password' placeholder='Password' required className={styles.input} />
+            </div>
 
-            <label><b>Password</b></label>
-            <input type='password' placeholder='Password' required />
-
-            <button type='submit'>Login</button>
+            <button type='submit' style={{ marginTop: '10px' }} className={styles.button}>Login</button>
           </div>
         </form>
       </div>
