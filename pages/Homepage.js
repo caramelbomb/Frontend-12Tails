@@ -1,10 +1,10 @@
 import styles from '../styles/Home.module.css'
-import Login from '../components/login/Login'
 
-export default function Home () {
+export default function Homepage() {
   return (
     <div className={styles.container}>
-      <Login />
+      Test
+
     </div>
   )
-}
+
