@@ -5,7 +5,7 @@ export default function Layout ({ children }) {
   const router = useRouter()
 
   return (
-    <div>
+    <>
       <div className={styles.header}>
         <img src='https://www.12tails-th.com/assets/img/static/small_logo.png' className={styles.logoSpace} />
         <div className={styles.emptySpace} />
@@ -26,6 +26,10 @@ export default function Layout ({ children }) {
         </div>
       </div>
       {children}
-    </div>
+      <div className={styles.footer}>
+        <div>240-311 DISTRIBUTED COMPUTING AND WEB TECHNOLOGIES</div>
+        <div>BY PEERAPATCH ANGSIYANON  6135512034</div>
+      </div>
+    </>
   )
 }

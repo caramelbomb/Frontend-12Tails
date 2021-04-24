@@ -123,3 +123,11 @@
   font-size: 22px;
   cursor: pointer;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #181107;
+}

@@ -1,33 +1,101 @@
 import styles from '../styles/Home.module.css'
+import Background from '../components/Background'
+import { useState } from 'react'
 
 export default function Login () {
+  const [formLogin, setFormLogin] = useState(true)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const test = () => {
+    if (formLogin === true) {
+      return (
+        <div className={styles.loginForm}>
+          <h2 style={{ fontSize: '30px', margin: '10px' }}>Login Form</h2>
+          <form>
+            <div className={styles.form}>
+              <div>
+                <label><b>Username</b></label>
+                <input
+                  type='text'
+                  placeholder='Username'
+                  required
+                  className={styles.input}
+                  onChange={(e) => { setUsername(e.target.value) }}
+                />
+              </div>
+              <div style={{ marginTop: '10px' }}>
+                <label><b>Password</b></label>
+                <input
+                  type='password'
+                  placeholder='Password'
+                  required className={styles.input}
+                  onChange={(e) => { setPassword(e.target.value) }}
+                />
+              </div>
+
+              <button
+                type='submit'
+                style={{ marginTop: '10px' }}
+                className={styles.button}
+              >Login
+              </button>
+            </div>
+            <div>Already have an account?
+              <strong
+                style={{ cursor: 'pointer', color: '#7abfe0', textDecoration: 'underline' }}
+                onClick={() => { setFormLogin(!formLogin) }}
+              >Sign in
+              </strong>
+            </div>
+          </form>
+        </div>
+      )
+    } else {
+      return (
+        <div className={styles.loginForm}>
+          <h2 style={{ fontSize: '30px', margin: '10px' }}>Register</h2>
+          <form>
+            <div className={styles.form}>
+              <div>
+                <label><b>Username</b></label>
+                <input
+                  type='text'
+                  placeholder='Username'
+                  required
+                  className={styles.input}
+                  onChange={(e) => { setUsername(e.target.value) }}
+                />
+              </div>
+              <div style={{ marginTop: '10px' }}>
+                <label><b>Password</b></label>
+                <input
+                  type='password'
+                  placeholder='Password'
+                  required className={styles.input}
+                  onChange={(e) => { setPassword(e.target.value) }}
+                />
+              </div>
+
+              <button type='submit' style={{ marginTop: '10px' }} className={styles.button}>Sign up</button>
+            </div>
+            <div>Back to
+              <strong
+                style={{ cursor: 'pointer', color: '#7abfe0', textDecoration: 'underline' }}
+                onClick={() => { setFormLogin(!formLogin) }}
+              >Login
+              </strong>
+            </div>
+          </form>
+        </div>
+      )
+    }
+  }
+
   return (
     <>
-      <div>
-        <img src='https://www.12tails-th.com/assets/img/background/header-main.png' className={styles.bgImg} />
-        <img src='https://www.12tails-th.com/assets/img/static/logo.png' className={styles.overlapImg} />
-      </div>
-      <div className={styles.loginForm}>
-        <h2 style={{ fontSize: '30px', margin: '10px' }}>Login Form</h2>
-        <form>
-          <div className={styles.form}>
-            <div>
-              <label><b>Username</b></label>
-              <input type='text' placeholder='Username' required className={styles.input} />
-            </div>
-            <div style={{ marginTop: '10px' }}>
-              <label><b>Password</b></label>
-              <input type='password' placeholder='Password' required className={styles.input} />
-            </div>
-
-            <button type='submit' style={{ marginTop: '10px' }} className={styles.button}>Login</button>
-          </div>
-        </form>
-      </div>
-      <div className={styles.footer}>
-        <div>240-311 DISTRIBUTED COMPUTING AND WEB TECHNOLOGIES</div>
-        <div>BY PEERAPATCH ANGSIYANON  6135512034</div>
-      </div>
+      <Background />
+      {test()}
     </>
   )
 }
