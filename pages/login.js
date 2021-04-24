@@ -23,6 +23,7 @@ export default function Login ({ token }) {
       ).then((res) => {
         localStorage.setItem('token', res.data.token)
         localStorage.setItem('user', res.data.user.username)
+        localStorage.setItem('_id', res.data.user._id)
         window.location.replace('/')
       }).catch(() => {
         setMessage('ไม่สามารถล็อคอินได้')
