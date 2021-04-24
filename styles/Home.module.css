@@ -129,5 +129,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #181107;
+  left: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
+  font-family: 'Prompt';
+  color: #fff;
+}
+
+.charactorLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.charactor {
+  margin-top: 20px;
+  height: 250px;
+}
+
+.pagination {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.paginationItem {
+  color: #000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fff;
+  border-right: 1px solid #000;
+  margin-right: 1px;
+  border-radius: 5px;
 }

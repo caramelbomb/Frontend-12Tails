@@ -45,7 +45,7 @@ export default function Login () {
               <strong
                 style={{ cursor: 'pointer', color: '#7abfe0', textDecoration: 'underline' }}
                 onClick={() => { setFormLogin(!formLogin) }}
-              >Sign in
+              > Sign in
               </strong>
             </div>
           </form>
@@ -83,7 +83,7 @@ export default function Login () {
               <strong
                 style={{ cursor: 'pointer', color: '#7abfe0', textDecoration: 'underline' }}
                 onClick={() => { setFormLogin(!formLogin) }}
-              >Login
+              > Login
               </strong>
             </div>
           </form>

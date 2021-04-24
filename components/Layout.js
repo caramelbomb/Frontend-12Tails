@@ -16,8 +16,18 @@ export default function Layout ({ children }) {
           }}
         > HOME
         </div>
-        <div className={styles.menuSpace}>SALE</div>
-        <div className={styles.menuSpace}>BUY</div>
+        <div
+          className={styles.menuSpace} onClick={() => {
+            router.push('/sale')
+          }}
+        >SALE
+        </div>
+        <div
+          className={styles.menuSpace} onClick={() => {
+            router.push('/buy')
+          }}
+        >BUY
+        </div>
         <div
           className={styles.menuSpace} onClick={() => {
             router.push('/loginpage')
