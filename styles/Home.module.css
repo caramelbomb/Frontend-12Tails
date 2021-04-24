@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background-color: #ffe9cf;
+  background-color: #181107;
 }
 
 .bgImg {
@@ -33,7 +33,7 @@
   position: absolute;
   top: 70%;
   transform: translate(-50%, -50%);
-  background-color: #df6d6d;
+  background-color: #715f55;
   padding: 0px 20px 20px 20px;
   border-radius: 10px;
   font-family: 'Prompt';
@@ -87,40 +87,39 @@
   font-size: 12px;
 }
 
-/* Tab */
-
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #b77d43;
+  display: flex;
+  flex-direction: row;
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
+.logoSpace {
+  margin-left: 15px;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptySpace {
+  width: 30%;
+}
+
+.menuSpace {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-right: 1px solid #fff;
+  height: 90%;
+  font-family: 'Prompt';
+  font-size: 22px;
   cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
 }

@@ -1,11 +1,12 @@
 import styles from '../styles/Home.module.css'
+import Login from '../components/Login'
 import Layout from '../components/Layout'
 
-export default function Home ({ token }) {
+export default function Homepage ({ token }) {
   return (
     <Layout token={token}>
       <div className={styles.container}>
-        test
+        <Login />
       </div>
     </Layout>
   )
