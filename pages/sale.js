@@ -1,5 +1,4 @@
 import styles from '../styles/Home.module.css'
-import Login from '../components/Login'
 import Layout from '../components/Layout'
 
 export default function SalePage ({ token }) {

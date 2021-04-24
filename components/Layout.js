@@ -1,8 +1,38 @@
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 export default function Layout ({ children }) {
   const router = useRouter()
+  const [username, setUsername] = useState('')
+
+  const getProfile = async () => {
+    await setUsername(localStorage.getItem('user'))
+  }
+
+  useEffect(() => {
+    getProfile()
+  })
+
+  const getLogin = () => {
+    console.log('useranme', username)
+    if (username) {
+      <div
+        className={styles.menuSpace}
+      >LOGOUT
+      </div>
+    } else {
+      return (
+        <div
+          className={styles.menuSpace} onClick={() => {
+            router.push('/login')
+          }}
+        >LOGIN
+        </div>
+      )
+    }
+  }
 
   return (
     <>
@@ -28,12 +58,7 @@ export default function Layout ({ children }) {
           }}
         >BUY
         </div>
-        <div
-          className={styles.menuSpace} onClick={() => {
-            router.push('/loginpage')
-          }}
-        >LOGIN
-        </div>
+        {getLogin()}
       </div>
       {children}
       <div className={styles.footer}>
