@@ -231,8 +231,8 @@
 
 .addForm {
   display: flex;
-  width: 80%;
-  height: 400px;
+  width:60%;
+  height: 450px;
   background-color: #715f55;
   flex-direction: column;
   justify-content: center;
@@ -249,12 +249,13 @@
   align-items: center;
   width: 90%;
   flex-wrap: wrap;
+  margin-bottom: 90px;
 }
 
 .ItemArray {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 20px;
   background-color: #715f55;
@@ -262,5 +263,16 @@
   height: 150px;
   margin: 20px 50px 0px 50px;
   border-radius: 10px;
+  font-family: 'Prompt';
+  color: #fff;
+  font-size: 16px;
 }
+
+.ItemContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
 

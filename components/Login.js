@@ -6,8 +6,9 @@ export default function Login () {
   const [formLogin, setFormLogin] = useState(true)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [tel, setTel] = useState('')
 
-  const test = () => {
+  const Form = () => {
     if (formLogin === true) {
       return (
         <div className={styles.loginForm}>
@@ -33,7 +34,6 @@ export default function Login () {
                   onChange={(e) => { setPassword(e.target.value) }}
                 />
               </div>
-
               <button
                 type='submit'
                 style={{ marginTop: '10px' }}
@@ -76,7 +76,15 @@ export default function Login () {
                   onChange={(e) => { setPassword(e.target.value) }}
                 />
               </div>
-
+              <div style={{ marginTop: '10px' }}>
+                <label><b>Telephone</b></label>
+                <input
+                  type='number'
+                  placeholder='Telephone'
+                  required className={styles.input}
+                  onChange={(e) => { setTel(e.target.value) }}
+                />
+              </div>
               <button type='submit' style={{ marginTop: '10px' }} className={styles.button}>Sign up</button>
             </div>
             <div>Back to
@@ -95,7 +103,7 @@ export default function Login () {
   return (
     <>
       <Background />
-      {test()}
+      {Form()}
     </>
   )
 }

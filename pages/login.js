@@ -10,6 +10,7 @@ export default function Login ({ token }) {
   const [message, setMessage] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [tel, setTel] = useState('')
   const url = 'http://localhost:9000/api/user'
 
   const SubmitForm = () => {
@@ -33,7 +34,8 @@ export default function Login ({ token }) {
       console.log('regis')
       const data = {
         username: username,
-        password: password
+        password: password,
+        tel: tel
       }
       axios.post(`${url}/register`, data)
         .then((res) => {
@@ -125,6 +127,15 @@ export default function Login ({ token }) {
                     onChange={(e) => { setPassword(e.target.value) }}
                   />
                 </div>
+                {formLogin === 'login' || <div style={{ marginTop: '10px' }}>
+                  <label><b>Telephone</b></label>
+                  <input
+                    type='text'
+                    placeholder='Telephone'
+                    required className={styles.input}
+                    onChange={(e) => { setTel(e.target.value) }}
+                  />
+                </div>}
 
                 <button
                   type='button'
